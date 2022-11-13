@@ -1,0 +1,17 @@
+.home-hero {
+    background: url("../../images/leaves.jpg") center center/contain;
+    color: rgb(255, 255, 255);
+    max-height: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.home-hero h1 {
+    font-family: "Brush Script MT", cursive;
+    padding: 2rem;
+}
+
+.home-hero span {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 5rem;
+}

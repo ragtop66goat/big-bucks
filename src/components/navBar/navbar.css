@@ -1,0 +1,39 @@
+.nav-bg {
+    background-color: rgb(202, 70, 9);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar span {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 2rem;
+}
+
+.nav-bar ul {
+    margin-right: 4rem;
+}
+
+.nav-bar ul a {
+    color: rgb(248, 247, 247);
+    font-size: 1.5rem;
+    padding: 30px 7px;
+    margin: 0.03rem;
+}
+
+.nav-bar ul a:hover {
+    color: rgb(202, 70, 9);
+    background-color: rgb(250, 223, 183);
+}

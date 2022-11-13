@@ -7,7 +7,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.image {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 4rem;
+  max-height: 60vh;
+  max-width: 40vw;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  margin: 1rem 4rem;
+}
+
+/* gives all columns in card even sizing */
+.content-card > * {
+  flex-basis: 100%;
+}
+
+.content-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-text,
+.card-text-2 {
+  text-align: center;
+  padding: 1rem;
 }
