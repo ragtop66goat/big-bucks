@@ -25,7 +25,7 @@ a {
 .logo {
   height: 60px;
   width: 60px;
-  margin: 1rem 4rem;
+  margin: 0.5rem 0;
 }
 
 /* gives all columns in card even sizing */
@@ -43,4 +43,23 @@ a {
 .card-text-2 {
   text-align: center;
   padding: 1rem;
+}
+
+/*hero section styling on all pages except home.js*/
+
+.secondary-hero {
+  background: url("./images/leaves.jpg") center center/contain;
+  color: rgb(255, 255, 255);
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+
+.secondary-hero h1 {
+  font-family: "Brush Script MT", cursive;
+}
+
+.secondary-hero span {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 5rem;
 }

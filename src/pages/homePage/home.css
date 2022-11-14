@@ -1,7 +1,7 @@
 .home-hero {
     background: url("../../images/leaves.jpg") center center/contain;
     color: rgb(255, 255, 255);
-    max-height: 400px;
+    height: 400px;
     width: 100%;
     text-align: center;
 }

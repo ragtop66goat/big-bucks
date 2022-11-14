@@ -10,7 +10,6 @@ export function Navbar() {
         <div>
           <ul>
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
             <Link to="/seasons">Seasons</Link>
             <Link to="/lodging">Lodging</Link>
             <Link to="/contact">Contact</Link>
