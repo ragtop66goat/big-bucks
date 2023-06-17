@@ -1,22 +1,22 @@
 .footer-bg {
-    background-color: rgb(224, 166, 6);
+  background-color: rgb(224, 166, 6);
 }
 
 .footer {
-    margin-top: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
 }
 
 .footer span {
-    font-family: Copperplate, Papyrus, fantasy;
-    font-size: 2rem;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 2rem;
 }
 
 .fab {
-    margin-right: 1rem;
-    height: 2rem;
-    width: 2rem;
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
 }

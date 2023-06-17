@@ -1,4 +1,3 @@
-import Calendar from "react-calendar";
 import deer from "../../images/deer.jpg";
 import elk from "../../images/elk.jpg";
 import bear from "../../images/bear.jpg";
