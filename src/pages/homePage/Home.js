@@ -16,7 +16,7 @@ export function Home() {
       </div>
       <div className="container">
         <div className="content-card">
-          <img src={indexLodge} className="image" />
+          <img src={indexLodge} alt="homeLog" className="image" />
           <div className="card-text">
             <h2>
               Welcome to Uncle Big Bucks <br />
@@ -34,7 +34,7 @@ export function Home() {
               one waiting on the trail for you too!
             </p>
           </div>
-          <img src={indexTrail} className="image" />
+          <img src={indexTrail} alt="homeTrail" className="image" />
         </div>
       </div>
     </>

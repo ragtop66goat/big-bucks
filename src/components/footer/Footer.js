@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <div className="footer-bg">
       <div className="container footer">
-        <img src={logo} className="logo" />
+        <img src={logo} alt="logo" className="logo" />
         <div>
           <span>Uncle Big Bucks</span>
         </div>
