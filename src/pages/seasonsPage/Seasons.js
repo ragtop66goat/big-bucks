@@ -13,7 +13,7 @@ export function Seasons() {
       </div>
       <div className="container">
         <div className="content-card">
-          <img src={deer} className="image" />
+          <img src={deer} alt="deer" className="image" />
           <div className="card-text">
             <h2>Deer Season Dates</h2>
             <h3>October</h3>
@@ -154,11 +154,11 @@ export function Seasons() {
               </tbody>
             </table>
           </div>
-          <img src={elk} className="image" />
+          <img src={elk} alt="elk" className="image" />
         </div>
 
         <div className="content-card">
-          <img src={bear} className="image" />
+          <img src={bear} alt="bear" className="image" />
           <div className="card-text">
             <h2>Bear Season Dates</h2>
             <h3>December</h3>

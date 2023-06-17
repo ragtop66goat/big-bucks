@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <div className="nav-bg">
       <div className="container nav-bar">
-        <img src={logo} className="logo" />
+        <img src={logo} alt="logo" className="logo" />
         <div>
           <ul>
             <Link to="/">Home</Link>

@@ -12,7 +12,7 @@ export function Contact() {
       </div>
       <div className="container">
         <div className="contact-container">
-          <img src={dog} className="image" />
+          <img src={dog} alt="dog" className="image" />
           <div className="m-5">
             <h3>Request your dates today</h3>
             <Form className="contact-form bg-light p-3">
@@ -20,7 +20,10 @@ export function Contact() {
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" placeholder="name" />
               </Form.Group>
-              <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
+              <Form.Group
+                className="mb-3 text-start"
+                controlId="formBasicEmail"
+              >
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Group className="mb-3 text-start" controlId="startDate">
