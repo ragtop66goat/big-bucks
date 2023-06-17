@@ -13,7 +13,7 @@ export function Lodging() {
       </div>
       <div className="container">
         <div className="content-card">
-          <img src={lodge} className="image" />
+          <img src={lodge} alt="lodge" className="image" />
           <div id="card-text">
             <p className="m-2">
               Located in rural Montana, the lodge resembles more of mountain
@@ -31,7 +31,7 @@ export function Lodging() {
               that wish to get to the middle of the action and stay there.
             </p>
           </div>
-          <img src={cabin} className="image" />
+          <img src={cabin} alt="cabin" className="image" />
         </div>
       </div>
     </>
