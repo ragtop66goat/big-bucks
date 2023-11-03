@@ -7,7 +7,7 @@ export function Home() {
     <>
       <div className="home-hero">
         <div className="container">
-          <h1>
+          <h1 data-testid="hero-text">
             <span>Uncle Big Bucks</span>
             <br />
             hunting lodge

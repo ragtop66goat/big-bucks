@@ -6,7 +6,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 export function Footer() {
   return (
-    <div className="footer-bg">
+    <div data-testid="footer" className="footer-bg">
       <div className="container footer">
         <img src={logo} alt="logo" className="logo" />
         <div>
