@@ -1,6 +1,6 @@
 import {screen} from "@testing-library/react";
 import {Navbar} from "../components/navBar/Navbar"
-import renderWithRouter from "./testUtils";
+import renderWithRouter from "../utils/testUtils";
 
 test("should render the logo and links labeled Home, Seasons, Lodging, and Contact", () => {
 
