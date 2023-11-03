@@ -13,9 +13,9 @@ export function Footer() {
           <span>Uncle Big Bucks</span>
         </div>
         <div>
-          <FaFacebookSquare className="fab" />
-          <FaTwitterSquare className="fab" />
-          <FaInstagramSquare className="fab" />
+          <FaFacebookSquare data-testid="social" className="fab" />
+          <FaTwitterSquare data-testid="social" className="fab" />
+          <FaInstagramSquare data-testid="social" className="fab" />
         </div>
       </div>
     </div>
