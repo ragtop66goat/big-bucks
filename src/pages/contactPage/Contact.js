@@ -17,22 +17,22 @@ export function Contact() {
             <h3>Request your dates today</h3>
             <Form className="contact-form bg-light p-3">
               <Form.Group className="mb-3 text-start" controlId="name">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="name" />
+                <Form.Label data-testid="name">Name</Form.Label>
+                <Form.Control data-testid="name-input" type="text" placeholder="name" />
               </Form.Group>
               <Form.Group
                 className="mb-3 text-start"
                 controlId="formBasicEmail"
               >
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Label data-testid="email">Email address</Form.Label>
+                <Form.Control data-testid="email-input" type="email" placeholder="Enter email" />
                 <Form.Group className="mb-3 text-start" controlId="startDate">
-                  <Form.Label>Start Date</Form.Label>
-                  <Form.Control type="date" placeholder="start date" />
+                  <Form.Label data-testid="start-date">Start Date</Form.Label>
+                  <Form.Control data-testid="start-date-input" type="date" placeholder="start date" />
                 </Form.Group>
                 <Form.Group className="mb-3 text-start" controlId="endDate">
-                  <Form.Label>End Date</Form.Label>
-                  <Form.Control type="date" placeholder="end date" />
+                  <Form.Label data-testid="end-date">End Date</Form.Label>
+                  <Form.Control data-testid="end-date-input" type="date" placeholder="end date" />
                 </Form.Group>
               </Form.Group>
 
