@@ -13,12 +13,24 @@ const formSlice = createSlice({
   reducers: {
     setEmail: (state, action) => {
       state.email = action.payload;
+    },
+    setName: (state, action) => {
+      state.name = action.payload;
+    },
+    setStartDate: (state, action) => {
+      state.startDate = action.payload;
+    },
+    setEndDate: (state, action) => {
+      state.endDate = action.payload;
     }
   }
 })
 
 export const {
-  setEmail
+  setEmail,
+  setName,
+  setStartDate,
+  setEndDate
 } = formSlice.actions;
 
 export default  formSlice.reducer;
