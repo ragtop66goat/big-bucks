@@ -4,7 +4,7 @@ import "./navbar.css";
 
 export function Navbar() {
   return (
-    <div className="nav-bg">
+    <div data-testid="navbar" className="nav-bg">
       <div className="container nav-bar">
         <img src={logo} alt="logo" className="logo" />
         <div>
