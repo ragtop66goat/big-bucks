@@ -1,0 +1,23 @@
+name: Run Test Coverage
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+      - name: Run Coverage
+        run: |
+          npm install
+          npm run coverage
