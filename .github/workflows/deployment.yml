@@ -31,7 +31,7 @@ jobs:
         uses: South-Paw/action-netlify-deploy@v1.2.0
         with:
           netlify-site-id: ${{secrets.NETLIFY_SITE_ID}}
-          netlify-access-token: ${{secrets.NETLIFY_ACCESS_TOKEN}}
+          netlify-auth-token: ${{secrets.NETLIFY_AUTH_TOKEN}}
           github-token: ${{secrets.GITHUB_TOKEN}}
           build-dir: './build'
           comment-on-commit: true
