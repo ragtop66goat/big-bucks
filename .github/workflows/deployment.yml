@@ -1,0 +1,37 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm run coverage
+
+      - name: Build File
+        run: build
+
+      - name: Deploy to Netlify
+        uses: South-Paw/action-netlify-deploy@v1.2.0
+        with:
+          netlify-site-id: ${{secrets.NETLIFY_SITE_ID}}
+          netlify-access-token: ${{secrets.NETLIFY_ACCESS_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          build-dir: './build'
+          comment-on-commit: true
