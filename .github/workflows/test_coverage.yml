@@ -20,4 +20,4 @@ jobs:
       - name: Run Coverage
         run: |
           npm install
-          nom run coverage
+          npm run coverage
