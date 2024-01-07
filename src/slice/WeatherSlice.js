@@ -5,7 +5,6 @@ const initialState = {
   longitude: "",
   latitude: "",
   forecastData: [],
-  loading: false,
   message: "",
 };
 
@@ -23,6 +22,13 @@ const weatherSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getForeCast.fulfilled, (state, action) => {
       state.forecastData = [action.payload];
+      state.message = "";
+    });
+    builder.addCase(getForeCast.pending, (state) => {
+      state.message = "Loading...";
+    });
+    builder.addCase(getForeCast.rejected, (state) => {
+      state.message = "There was an error retrieving the forecast data";
     });
   },
 });

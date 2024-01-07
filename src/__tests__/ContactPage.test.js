@@ -2,18 +2,29 @@ import { screen } from "@testing-library/react";
 import { Contact } from "../pages/contactPage/Contact";
 import { customRenderReturnMockStore } from "../utils/testUtils";
 import userEvent from "@testing-library/user-event";
+import { render } from "../utils/testUtils";
+
+jest.mock("../components/forecast display/ForecastDisplay", () => {
+  return () => <h1>ForecastDisplay</h1>;
+});
 
 describe("ContactPage tests", () => {
-  test("should initially render the 'Contact', the dog image, and 'Request your dates today'", () => {
+  test("should initially render 'Contact', the dog image, and 'Request your dates today'", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
-    customRenderReturnMockStore(<Contact />, initialState);
+    render(<Contact />, { initialState });
 
     expect(screen.getByAltText("dog")).toBeInTheDocument();
     expect(screen.getByText("Contact")).toBeInTheDocument();
@@ -22,15 +33,21 @@ describe("ContactPage tests", () => {
 
   test("should render a form with 'Name', 'Email', 'Start Date', and 'End Date' labels", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
 
-    customRenderReturnMockStore(<Contact />, initialState);
+    render(<Contact />, { initialState });
 
     expect(screen.getByTestId("name")).toBeInTheDocument();
     expect(screen.getByTestId("email")).toBeInTheDocument();
@@ -38,17 +55,23 @@ describe("ContactPage tests", () => {
     expect(screen.getByTestId("end-date")).toBeInTheDocument();
   });
 
-  test("should render email and name input fields", () => {
+  test("should render email, name, start date, and end date input fields", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
 
-    customRenderReturnMockStore(<Contact />, initialState);
+    render(<Contact />, { initialState });
 
     expect(screen.getByTestId("name-input").tagName).toBe("INPUT");
     expect(screen.getByTestId("email-input").tagName).toBe("INPUT");
@@ -56,17 +79,47 @@ describe("ContactPage tests", () => {
     expect(screen.getByTestId("end-date-input").tagName).toBe("INPUT");
   });
 
-  test("should dispatch setName with 'T' when 'T' is typed in name input", () => {
+  test("should render a submit and get forecast button", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
 
-    const { store } = customRenderReturnMockStore(<Contact />, initialState);
+    render(<Contact />, { initialState });
+
+    expect(screen.getByText("Submit").tagName).toBe("BUTTON");
+    expect(screen.getByText("Get Forecast").tagName).toBe("BUTTON");
+  });
+
+  test("should dispatch setName with 'T' when 'T' is typed in name input", () => {
+    const initialState = {
+      formSlice: {
+        name: "",
+        email: "",
+        startDate: "",
+        endDate: "",
+      },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
+    };
+
+    const { store } = customRenderReturnMockStore(<Contact />, {
+      initialState,
+    });
 
     const input = screen.getByTestId("name-input");
 
@@ -80,15 +133,23 @@ describe("ContactPage tests", () => {
 
   test("should dispatch setEmail with 'T' when 'T' is typed in email input", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
 
-    const { store } = customRenderReturnMockStore(<Contact />, initialState);
+    const { store } = customRenderReturnMockStore(<Contact />, {
+      initialState,
+    });
 
     const input = screen.getByTestId("email-input");
 
@@ -102,15 +163,23 @@ describe("ContactPage tests", () => {
 
   test("should dispatch setStartDate with '2023-10-10' when entered in the Start Date input", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
 
-    const { store } = customRenderReturnMockStore(<Contact />, initialState);
+    const { store } = customRenderReturnMockStore(<Contact />, {
+      initialState,
+    });
 
     const input = screen.getByTestId("start-date-input");
 
@@ -124,15 +193,23 @@ describe("ContactPage tests", () => {
 
   test("should dispatch setEndDate with '2023-10-10' when entered in the End Date input", () => {
     const initialState = {
-      form: {
+      formSlice: {
         name: "",
         email: "",
         startDate: "",
         endDate: "",
       },
+      weatherSlice: {
+        longitude: "",
+        latitude: "",
+        forecastData: [],
+        message: "",
+      },
     };
 
-    const { store } = customRenderReturnMockStore(<Contact />, initialState);
+    const { store } = customRenderReturnMockStore(<Contact />, {
+      initialState,
+    });
 
     const input = screen.getByTestId("end-date-input");
 
@@ -143,4 +220,46 @@ describe("ContactPage tests", () => {
       payload: "2023-10-10",
     });
   });
+});
+
+test("should render ForecastDisplay when forecastData is present", () => {
+  const initialState = {
+    formSlice: {
+      name: "",
+      email: "",
+      startDate: "",
+      endDate: "",
+    },
+    weatherSlice: {
+      longitude: "",
+      latitude: "",
+      forecastData: ["test"],
+      message: "",
+    },
+  };
+
+  render(<Contact />, { initialState });
+
+  expect(screen.getByText("ForecastDisplay")).toBeInTheDocument();
+});
+
+test("should display a message when one is present and not ForecastData when no data is present", () => {
+  const initialState = {
+    formSlice: {
+      name: "",
+      email: "",
+      startDate: "",
+      endDate: "",
+    },
+    weatherSlice: {
+      longitude: "",
+      latitude: "",
+      forecastData: [],
+      message: "test",
+    },
+  };
+
+  render(<Contact />, { initialState });
+
+  expect(screen.getByText("test")).toBeInTheDocument();
 });

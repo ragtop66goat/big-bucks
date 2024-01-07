@@ -63,3 +63,14 @@ a {
   font-family: Copperplate, Papyrus, fantasy;
   font-size: 5rem;
 }
+
+.btn-styled {
+  border-radius: 10px;
+  border: solid 2px rgb(224, 166, 6);
+  color: rgb(202, 70, 9);
+  background-color: white;
+}
+
+.btn-styled:hover {
+  box-shadow: 3px 3px rgba(202, 70, 9, 0.2), 2px 2px 4px rgba(224, 166, 6, 0.2) inset;
+}
