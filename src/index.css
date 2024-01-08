@@ -18,8 +18,8 @@ a {
 .image {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-top: 4rem;
-  max-height: 60vh;
-  max-width: 40vw;
+  height: 54vh;
+  width: 36vw;
 }
 
 .logo {
@@ -62,4 +62,15 @@ a {
 .secondary-hero span {
   font-family: Copperplate, Papyrus, fantasy;
   font-size: 5rem;
+}
+
+.btn-styled {
+  border-radius: 10px;
+  border: solid 2px rgb(224, 166, 6);
+  color: rgb(202, 70, 9);
+  background-color: white;
+}
+
+.btn-styled:hover {
+  box-shadow: 3px 3px rgba(202, 70, 9, 0.2), 2px 2px 4px rgba(224, 166, 6, 0.2) inset;
 }
