@@ -80,7 +80,11 @@ export function Contact() {
         </h3>
         <ForecastDisplay data={data} />
         {message.length > 0 && <h3>{message}</h3>}
-        <button className="btn-styled" onClick={() => dispatch(getForeCast())}>
+        <button
+          data-testid="forecast-button"
+          className="btn-styled"
+          onClick={() => dispatch(getForeCast())}
+        >
           Get Forecast
         </button>
       </div>

@@ -222,6 +222,31 @@ describe("ContactPage tests", () => {
   });
 });
 
+test("should dispatch getForecast when Get Forecast button is pressed", () => {
+  const initialState = {
+    formSlice: {
+      name: "",
+      email: "",
+      startDate: "",
+      endDate: "",
+    },
+    weatherSlice: {
+      latitude: "",
+      longitude: "",
+      forecastData: [],
+      message: "",
+    },
+  };
+
+  const { store } = customRenderReturnMockStore(<Contact />, { initialState });
+
+  const btn = screen.getByTestId("forecast-button");
+
+  userEvent.click(btn);
+
+  expect(store.getActions()[0].type).toEqual("weather/get/pending");
+});
+
 test("should render ForecastDisplay when forecastData is present", () => {
   const initialState = {
     formSlice: {
