@@ -15,11 +15,16 @@ a {
   text-decoration: none;
 }
 
+.desc-1{
+  font-size: 1.5rem;
+  text-shadow: 1px 1px rgb(202, 70, 9);
+}
+
 .image {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-top: 4rem;
-  height: 54vh;
-  width: 36vw;
+  margin-top: 10rem;
+  max-height: 54vh;
+  max-width: 36vw;
 }
 
 .logo {
@@ -35,7 +40,6 @@ a {
 
 .content-card {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -50,9 +54,10 @@ a {
 .secondary-hero {
   background: url("./images/leaves.jpg") center center/contain;
   color: rgb(255, 255, 255);
-  height: 150px;
+  height: 175px;
   width: 100%;
   text-align: center;
+  padding: 1rem;
 }
 
 .secondary-hero h1 {

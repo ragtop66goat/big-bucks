@@ -15,7 +15,7 @@ export function Lodging() {
         <div className="content-card">
           <img src={lodge} alt="lodge" className="image" />
           <div id="card-text">
-            <p data-testid="description-1" className="m-2">
+            <p data-testid="description-1" className="m-4 desc-1">
               Located in rural Montana, the lodge resembles more of mountain
               mansion after our recent renovations. Uncle Big Bucks has been a
               family owned and run operation for 2 generations, and our
@@ -26,7 +26,7 @@ export function Lodging() {
 
         <div className="content-card">
           <div id="card-text-2">
-            <p data-testid="description-2" className="m-2">
+            <p data-testid="description-2" className="m-4 desc-1">
               We also offer spacious cabins in remote locations for small groups
               that wish to get to the middle of the action and stay there.
             </p>

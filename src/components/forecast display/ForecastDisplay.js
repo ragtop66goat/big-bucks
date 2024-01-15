@@ -1,7 +1,6 @@
 import { Card } from "react-bootstrap";
 
 export default function ForecastDisplay({ data }) {
-  console.log(data);
   return (
     <div className="container d-flex overflow-auto">
       {data?.daily?.map((item, idx) => (

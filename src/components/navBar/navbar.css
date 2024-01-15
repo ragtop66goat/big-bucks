@@ -10,6 +10,13 @@ a {
     text-decoration: none;
 }
 
+.nav-position {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .nav-bar {
     color: #fff;
     display: flex;
@@ -17,23 +24,12 @@ a {
     align-items: center;
 }
 
-.nav-bar span {
-    font-family: Copperplate, Papyrus, fantasy;
-    font-size: 2rem;
-}
-
-.nav-bar ul {
-    margin-right: 4rem;
-}
-
-.nav-bar ul a {
+.navLink {
     color: rgb(248, 247, 247);
     font-size: 1.5rem;
-    padding: 30px 7px;
-    margin: 0.03rem;
 }
 
-.nav-bar ul a:hover {
-    color: rgb(202, 70, 9);
-    background-color: rgb(250, 223, 183);
+.navLink:hover {
+    color: rgb(248, 247, 247);
+    text-shadow: 3px 4px #660000 ;
 }
