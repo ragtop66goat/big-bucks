@@ -5,7 +5,7 @@ import { Container, Nav } from "react-bootstrap";
 
 export function NavBar() {
   return (
-    <div className="nav-position">
+    <div className="nav-position" data-testid="navbar">
       <Navbar expand="lg" className="nav-bg">
         <Container className="d-flex justify-content-between">
           <Navbar.Brand href="/">
