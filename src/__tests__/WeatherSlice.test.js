@@ -37,4 +37,49 @@ describe("Weather Slice Tests", () => {
       reducer(initState, { type: setLatitude, payload: "1" })
     ).toStrictEqual(result);
   });
+
+  test("should set message to 'Loading'", () => {
+    const result = {
+      longitude: "",
+      latitude: "",
+      forecastData: [],
+      message: "Loading...",
+    };
+
+    expect(reducer(initState, { type: "weather/get/pending" })).toStrictEqual(
+      result
+    );
+  });
+
+  test("should set message to '' and forecastData to ['test']", () => {
+    const pendingState = {
+      longitude: "",
+      latitude: "",
+      forecastData: [],
+      message: "Loading...",
+    };
+    const result = {
+      longitude: "",
+      latitude: "",
+      forecastData: ["test"],
+      message: "",
+    };
+
+    expect(
+      reducer(pendingState, { type: "weather/get/fulfilled", payload: "test" })
+    ).toStrictEqual(result);
+  });
+
+  test("should set message to 'There was an error retrieving the forecast data", () => {
+    const result = {
+      longitude: "",
+      latitude: "",
+      forecastData: [],
+      message: "There was an error retrieving the forecast data",
+    };
+
+    expect(reducer(initState, { type: "weather/get/rejected" })).toStrictEqual(
+      result
+    );
+  });
 });
