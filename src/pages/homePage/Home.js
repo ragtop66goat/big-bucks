@@ -27,7 +27,7 @@ export function Home() {
 
         <div className="content-card">
           <div className="card-text-2">
-            <p>
+            <p className="desc-1">
               Whether you're a rather young buck yourself, or just young at
               heart, we have a package that's perfect for you. Countless big
               game enthusiasts have left with great stories to tell, and there's
