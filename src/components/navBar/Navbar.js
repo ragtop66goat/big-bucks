@@ -8,22 +8,22 @@ export function NavBar() {
     <div className="nav-position" data-testid="navbar">
       <Navbar expand="lg" className="nav-bg">
         <Container className="d-flex justify-content-between">
-          <Navbar.Brand href="/">
+          <Navbar.Brand to="/">
             <img src={logo} alt="logo" className="logo" />{" "}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Nav className="me-auto">
-              <Nav.Link href="/" className="navLink">
+              <Nav.Link to="/" className="navLink">
                 Home
               </Nav.Link>
-              <Nav.Link href="/seasons" className="navLink">
+              <Nav.Link to="/seasons" className="navLink">
                 Seasons
               </Nav.Link>
-              <Nav.Link href="/lodging" className="navLink">
+              <Nav.Link to="/lodging" className="navLink">
                 Lodging
               </Nav.Link>
-              <Nav.Link href="/contact" className="navLink">
+              <Nav.Link to="/contact" className="navLink">
                 Contact
               </Nav.Link>
             </Nav>
@@ -33,17 +33,3 @@ export function NavBar() {
     </div>
   );
 }
-
-// <div data-testid="navbar" className="nav-bg">
-//   <div className="container nav-bar">
-//     <img src={logo} alt="logo" className="logo" />
-//     <div>
-//       <ul>
-//         <Link to="/">Home</Link>
-//         <Link to="/seasons">Seasons</Link>
-//         <Link to="/lodging">Lodging</Link>
-//         <Link to="/contact">Contact</Link>
-//       </ul>
-//     </div>
-//   </div>
-// </div>
