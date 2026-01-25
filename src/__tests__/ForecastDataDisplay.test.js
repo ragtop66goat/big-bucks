@@ -2,7 +2,7 @@ import ForecastDisplay from "../components/forecast display/ForecastDisplay";
 import { render } from "../utils/testUtils";
 import { screen } from "@testing-library/react";
 
-test("should render data.daily when it is present in state", () => {
+it("should render data.daily when it is present in state", () => {
   const data = {
     daily: [
       {
@@ -20,7 +20,7 @@ test("should render data.daily when it is present in state", () => {
   render(<ForecastDisplay data={data} />);
 
   expect(
-    screen.getByText("Chance of Precipitation: 0.114%")
+    screen.getByText("Chance of Precipitation: 0.114%"),
   ).toBeInTheDocument();
   expect(screen.getByText("Temp: 37.5/32.6")).toBeInTheDocument();
   expect(screen.getByText("Sunrise: 00:11 Sunset: 08:19"));
