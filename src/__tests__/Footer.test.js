@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Footer } from "../components/footer/Footer";
 
 describe("Footer Component Tests", () => {
-  test("should render logo, company name, and social media icons in footer", () => {
+  it("should render logo, company name, and social media icons in footer", () => {
     render(<Footer />);
 
     const socialIcons = screen.queryAllByTestId("social");
