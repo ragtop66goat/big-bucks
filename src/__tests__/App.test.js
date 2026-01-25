@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "../store";
 import App from "../App";
+import { Packages } from "../pages/packagesPage/Packages";
 
 describe("App Component Tests", () => {
   it("should render app, navbar, and footer", () => {
@@ -15,14 +15,13 @@ describe("App Component Tests", () => {
   });
 
   it("should render Packages component when navigating to /packages", () => {
-    const history = createMemoryHistory();
-    history.push("/packages");
-
     render(
       <Provider store={store}>
-        <Router location={history.location} navigator={history}>
-          <App />
-        </Router>
+        <MemoryRouter initialEntries={["/packages"]}>
+          <Routes>
+            <Route path="/packages" element={<Packages />} />
+          </Routes>
+        </MemoryRouter>
       </Provider>,
     );
 

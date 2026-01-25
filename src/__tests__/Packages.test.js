@@ -1,7 +1,6 @@
 import { screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { Packages } from "../pages/packagesPage/Packages";
-import { render } from "../utils/testUtils";
+import { render, customRenderReturnMockStore } from "../utils/testUtils";
 
 // Mock child components to simplify testing
 jest.mock("../components/packageCard/PackageCard", () => {
@@ -114,14 +113,16 @@ describe("Packages Page Tests", () => {
     expect(screen.getByTestId("mock-discount-info")).toBeInTheDocument();
   });
 
-  it("should dispatch setSelectedPackage when package card is selected", async () => {
-    const user = userEvent.setup();
-    const { store } = render(<Packages />, { initialState });
+  it("should dispatch setSelectedPackage when package card is selected", () => {
+    const { store } = customRenderReturnMockStore(<Packages />, {
+      initialState,
+    });
 
     const selectButton = screen.getAllByText("Select")[0];
-    await user.click(selectButton);
+    selectButton.click();
 
-    const state = store.getState();
-    expect(state.packageSlice.selectedPackageId).toBe(1);
+    const actions = store.getActions();
+    expect(actions[0].type).toBe("package/setSelectedPackage");
+    expect(actions[0].payload).toBe(1);
   });
 });

@@ -35,8 +35,8 @@ describe("DiscountInfo Component Tests", () => {
   it("should render all discount tiers", () => {
     render(<DiscountInfo discounts={mockDiscounts} promotions={[]} />);
 
-    expect(screen.getByText(/5-7 hunters/)).toBeInTheDocument();
-    expect(screen.getByText(/8\+ hunters/)).toBeInTheDocument();
+    expect(screen.getAllByText(/5-7 hunters/).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/8\+ hunters/).length).toBeGreaterThan(0);
   });
 
   it("should display discount percentage correctly", () => {

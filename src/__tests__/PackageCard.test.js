@@ -1,5 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { PackageCard } from "../components/packageCard/PackageCard";
 
 describe("PackageCard Component Tests", () => {
@@ -67,14 +66,13 @@ describe("PackageCard Component Tests", () => {
     expect(screen.queryByText(/Most Popular/i)).not.toBeInTheDocument();
   });
 
-  it("should call onSelect with package id when button clicked", async () => {
-    const user = userEvent.setup();
+  it("should call onSelect with package id when button clicked", () => {
     render(<PackageCard packageData={mockPackage} onSelect={mockOnSelect} />);
 
     const selectButton = screen.getByRole("button", {
       name: /Select Package/i,
     });
-    await user.click(selectButton);
+    fireEvent.click(selectButton);
 
     expect(mockOnSelect).toHaveBeenCalledWith(1);
   });
