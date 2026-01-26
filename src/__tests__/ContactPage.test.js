@@ -9,7 +9,7 @@ jest.mock("../components/forecast display/ForecastDisplay", () => {
 });
 
 describe("ContactPage tests", () => {
-  test("should initially render 'Contact', the dog image, and 'Request your dates today'", () => {
+  it("should initially render 'Contact', the dog image, and 'Request your dates today'", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -31,7 +31,7 @@ describe("ContactPage tests", () => {
     expect(screen.getByText("Request your dates today")).toBeInTheDocument();
   });
 
-  test("should render a form with 'Name', 'Email', 'Start Date', and 'End Date' labels", () => {
+  it("should render a form with 'Name', 'Email', 'Start Date', and 'End Date' labels", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -55,7 +55,7 @@ describe("ContactPage tests", () => {
     expect(screen.getByTestId("end-date")).toBeInTheDocument();
   });
 
-  test("should render email, name, start date, and end date input fields", () => {
+  it("should render email, name, start date, and end date input fields", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -79,7 +79,7 @@ describe("ContactPage tests", () => {
     expect(screen.getByTestId("end-date-input").tagName).toBe("INPUT");
   });
 
-  test("should render a submit and get forecast button", () => {
+  it("should render a submit and get forecast button", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -101,7 +101,7 @@ describe("ContactPage tests", () => {
     expect(screen.getByText("Get Forecast").tagName).toBe("BUTTON");
   });
 
-  test("should dispatch setName with 'T' when 'T' is typed in name input", () => {
+  it("should dispatch setName with 'T' when 'T' is typed in name input", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -131,7 +131,7 @@ describe("ContactPage tests", () => {
     });
   });
 
-  test("should dispatch setEmail with 'T' when 'T' is typed in email input", () => {
+  it("should dispatch setEmail with 'T' when 'T' is typed in email input", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -161,7 +161,7 @@ describe("ContactPage tests", () => {
     });
   });
 
-  test("should dispatch setStartDate with '2023-10-10' when entered in the Start Date input", () => {
+  it("should dispatch setStartDate with '2023-10-10' when entered in the Start Date input", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -191,7 +191,7 @@ describe("ContactPage tests", () => {
     });
   });
 
-  test("should dispatch setEndDate with '2023-10-10' when entered in the End Date input", () => {
+  it("should dispatch setEndDate with '2023-10-10' when entered in the End Date input", () => {
     const initialState = {
       formSlice: {
         name: "",
@@ -222,7 +222,7 @@ describe("ContactPage tests", () => {
   });
 });
 
-test("should dispatch getForecast when Get Forecast button is pressed", () => {
+it("should dispatch getForecast when Get Forecast button is pressed", () => {
   const initialState = {
     formSlice: {
       name: "",
@@ -247,7 +247,7 @@ test("should dispatch getForecast when Get Forecast button is pressed", () => {
   expect(store.getActions()[0].type).toEqual("weather/get/pending");
 });
 
-test("should render ForecastDisplay when forecastData is present", () => {
+it("should render ForecastDisplay when forecastData is present", () => {
   const initialState = {
     formSlice: {
       name: "",
@@ -268,7 +268,7 @@ test("should render ForecastDisplay when forecastData is present", () => {
   expect(screen.getByText("ForecastDisplay")).toBeInTheDocument();
 });
 
-test("should display a message when one is present and not ForecastData when no data is present", () => {
+it("should display a message when one is present and not ForecastData when no data is present", () => {
   const initialState = {
     formSlice: {
       name: "",

@@ -1,0 +1,72 @@
+.addons-section {
+  margin: 3rem 0;
+  padding: 2rem 1rem;
+}
+
+.addons-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(202, 70, 9);
+  margin-bottom: 1rem;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+.addons-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.addon-card {
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid rgb(224, 166, 6);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 220px;
+}
+
+.addon-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.addon-icon {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(224, 166, 6);
+  margin-bottom: 0.75rem;
+}
+
+.addon-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgb(202, 70, 9);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.addon-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(224, 166, 6);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.addon-description {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .addons-heading {
+    font-size: 2rem;
+  }
+
+  .addon-card {
+    min-height: auto;
+  }
+}

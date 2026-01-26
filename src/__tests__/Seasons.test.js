@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Seasons } from "../pages/seasonsPage/Seasons";
 
 describe("Seasons Component Tets", () => {
-  test("should render 'Seasons', 'Deer Season Dates', 'October', 'Elk Season Dates', 'November', 'Bear Season Dates', and 'December' headers", () => {
+  it("should render 'Seasons', 'Deer Season Dates', 'October', 'Elk Season Dates', 'November', 'Bear Season Dates', and 'December' headers", () => {
     render(<Seasons />);
 
     expect(screen.getByText("Seasons")).toBeInTheDocument();
@@ -14,7 +14,7 @@ describe("Seasons Component Tets", () => {
     expect(screen.getByText("Bear Season Dates")).toBeInTheDocument();
   });
 
-  test("should render deer, elk, and bear images", () => {
+  it("should render deer, elk, and bear images", () => {
     render(<Seasons />);
 
     expect(screen.getByAltText("bear")).toBeInTheDocument();

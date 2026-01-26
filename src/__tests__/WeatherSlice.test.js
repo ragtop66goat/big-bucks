@@ -8,11 +8,11 @@ describe("Weather Slice Tests", () => {
     message: "",
   };
 
-  test("should render correct initial state", () => {
+  it("should render correct initial state", () => {
     expect(reducer(undefined, { type: undefined })).toStrictEqual(initState);
   });
 
-  test("should set longitude to 1", () => {
+  it("should set longitude to 1", () => {
     const result = {
       longitude: "1",
       latitude: "",
@@ -21,11 +21,11 @@ describe("Weather Slice Tests", () => {
     };
 
     expect(
-      reducer(initState, { type: setLongitude, payload: "1" })
+      reducer(initState, { type: setLongitude, payload: "1" }),
     ).toStrictEqual(result);
   });
 
-  test("should set latitude to 1", () => {
+  it("should set latitude to 1", () => {
     const result = {
       longitude: "",
       latitude: "1",
@@ -34,11 +34,11 @@ describe("Weather Slice Tests", () => {
     };
 
     expect(
-      reducer(initState, { type: setLatitude, payload: "1" })
+      reducer(initState, { type: setLatitude, payload: "1" }),
     ).toStrictEqual(result);
   });
 
-  test("should set message to 'Loading'", () => {
+  it("should set message to 'Loading'", () => {
     const result = {
       longitude: "",
       latitude: "",
@@ -47,11 +47,11 @@ describe("Weather Slice Tests", () => {
     };
 
     expect(reducer(initState, { type: "weather/get/pending" })).toStrictEqual(
-      result
+      result,
     );
   });
 
-  test("should set message to '' and forecastData to ['test']", () => {
+  it("should set message to '' and forecastData to ['test']", () => {
     const pendingState = {
       longitude: "",
       latitude: "",
@@ -66,11 +66,11 @@ describe("Weather Slice Tests", () => {
     };
 
     expect(
-      reducer(pendingState, { type: "weather/get/fulfilled", payload: "test" })
+      reducer(pendingState, { type: "weather/get/fulfilled", payload: "test" }),
     ).toStrictEqual(result);
   });
 
-  test("should set message to 'There was an error retrieving the forecast data", () => {
+  it("should set message to 'There was an error retrieving the forecast data", () => {
     const result = {
       longitude: "",
       latitude: "",
@@ -79,7 +79,7 @@ describe("Weather Slice Tests", () => {
     };
 
     expect(reducer(initState, { type: "weather/get/rejected" })).toStrictEqual(
-      result
+      result,
     );
   });
 });

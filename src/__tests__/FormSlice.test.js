@@ -13,7 +13,7 @@ describe("Form Slice Reducer Tests", () => {
     endDate: "",
   };
 
-  test("should render correct initial state", () => {
+  it("should render correct initial state", () => {
     const result = {
       name: "",
       email: "",
@@ -24,7 +24,7 @@ describe("Form Slice Reducer Tests", () => {
     expect(reducer(undefined, { type: undefined })).toStrictEqual(result);
   });
 
-  test("should set name to 'T' when setName is dispatched with 'T'", () => {
+  it("should set name to 'T' when setName is dispatched with 'T'", () => {
     const result = {
       name: "T",
       email: "",
@@ -33,11 +33,11 @@ describe("Form Slice Reducer Tests", () => {
     };
 
     expect(
-      reducer(initFormState, { type: setName, payload: "T" })
+      reducer(initFormState, { type: setName, payload: "T" }),
     ).toStrictEqual(result);
   });
 
-  test("should set email to 'T' when setEmail is dispatched with 'T'", () => {
+  it("should set email to 'T' when setEmail is dispatched with 'T'", () => {
     const result = {
       name: "",
       email: "T",
@@ -46,11 +46,11 @@ describe("Form Slice Reducer Tests", () => {
     };
 
     expect(
-      reducer(initFormState, { type: setEmail, payload: "T" })
+      reducer(initFormState, { type: setEmail, payload: "T" }),
     ).toStrictEqual(result);
   });
 
-  test("should set startDate to '2023-10-10' when setStartDate is dispatched with '2023-10-10'", () => {
+  it("should set startDate to '2023-10-10' when setStartDate is dispatched with '2023-10-10'", () => {
     const result = {
       name: "",
       email: "",
@@ -59,11 +59,11 @@ describe("Form Slice Reducer Tests", () => {
     };
 
     expect(
-      reducer(initFormState, { type: setStartDate, payload: "2023-10-10" })
+      reducer(initFormState, { type: setStartDate, payload: "2023-10-10" }),
     ).toStrictEqual(result);
   });
 
-  test("should set endDate to '2023-10-10' when setEndDate is dispatched with '2023-10-10'", () => {
+  it("should set endDate to '2023-10-10' when setEndDate is dispatched with '2023-10-10'", () => {
     const result = {
       name: "",
       email: "",
@@ -72,7 +72,7 @@ describe("Form Slice Reducer Tests", () => {
     };
 
     expect(
-      reducer(initFormState, { type: setEndDate, payload: "2023-10-10" })
+      reducer(initFormState, { type: setEndDate, payload: "2023-10-10" }),
     ).toStrictEqual(result);
   });
 });

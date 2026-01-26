@@ -24,6 +24,9 @@ export function NavBar() {
               <Link to="/lodging" className="navLink">
                 Lodging
               </Link>
+              <Link to="/packages" className="navLink">
+                Packages
+              </Link>
               <Link to="/contact" className="navLink">
                 Contact
               </Link>
