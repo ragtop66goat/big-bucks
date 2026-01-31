@@ -1,0 +1,130 @@
+.license-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.license-info-heading {
+  color: rgb(202, 70, 9);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.required-licenses h4,
+.cost-table h4 {
+  color: rgb(202, 70, 9);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.license-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.license-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.check-icon {
+  color: rgb(224, 166, 6);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.application-deadline {
+  background-color: rgba(224, 166, 6, 0.1);
+  padding: 0.75rem;
+  border-left: 4px solid rgb(224, 166, 6);
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.application-deadline strong {
+  color: rgb(202, 70, 9);
+}
+
+.cost-table {
+  margin-bottom: 1.5rem;
+}
+
+.cost-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.cost-table th,
+.cost-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.cost-table th {
+  background-color: rgba(202, 70, 9, 0.1);
+  color: rgb(202, 70, 9);
+  font-weight: bold;
+}
+
+.cost-table tr:last-child td {
+  border-bottom: none;
+}
+
+.license-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.license-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(202, 70, 9);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.license-link:hover {
+  background-color: rgb(180, 60, 8);
+  color: white;
+  text-decoration: none;
+}
+
+.license-link svg {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .license-info {
+    padding: 1rem;
+  }
+
+  .cost-table table {
+    font-size: 0.9rem;
+  }
+
+  .cost-table th,
+  .cost-table td {
+    padding: 0.5rem;
+  }
+
+  .license-links {
+    flex-direction: column;
+  }
+
+  .license-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
