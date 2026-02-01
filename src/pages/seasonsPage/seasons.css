@@ -1,24 +1,42 @@
-/* table styling */
-table,
-th,
-td {
-    border: 3px solid rgb(119, 55, 3);
-    border-collapse: collapse;
-    border-spacing: 0;
+.seasons-page-content {
+  padding: 2rem 0;
+  max-width: 1400px;
 }
 
-table {
-    margin: auto;
-}
-th {
-    padding: 10px;
+.intro-text {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-td {
-    padding: 5px;
+.intro-text .desc-1 {
+  font-size: 1.3rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.in {
-    color: rgb(255, 255, 255);
-    background-color: rgb(243, 194, 60);
+.seasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Admin mode badge */
+.ms-3 {
+  margin-left: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .seasons-page-content {
+    padding: 1rem 0;
+  }
+
+  .intro-text .desc-1 {
+    font-size: 1.1rem;
+  }
+
+  .seasons-list {
+    gap: 2rem;
+  }
 }

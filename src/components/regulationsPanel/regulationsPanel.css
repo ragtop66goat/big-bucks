@@ -1,0 +1,115 @@
+.regulations-panel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bag-limits-section {
+  margin-bottom: 1.5rem;
+}
+
+.regulations-heading {
+  color: rgb(202, 70, 9);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trophy-icon {
+  color: rgb(224, 166, 6);
+  font-size: 1.3rem;
+}
+
+.bag-limit-info {
+  background-color: rgba(202, 70, 9, 0.05);
+  padding: 1rem;
+  border-left: 4px solid rgb(202, 70, 9);
+  border-radius: 4px;
+}
+
+.bag-limit-general {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(202, 70, 9);
+  margin-bottom: 0.75rem;
+}
+
+.bag-limit-restrictions {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.bag-limit-restrictions strong {
+  color: rgb(202, 70, 9);
+}
+
+.bag-limit-notes {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.bag-limit-notes li {
+  margin-bottom: 0.25rem;
+}
+
+.regulations-section {
+  margin-top: 1.5rem;
+}
+
+.regulations-alert {
+  background-color: #fff3cd;
+  border-color: rgb(224, 166, 6);
+  padding: 1rem;
+}
+
+.regulations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.regulations-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.regulations-list li:last-child {
+  margin-bottom: 0;
+}
+
+.warning-icon {
+  color: rgb(202, 70, 9);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .regulations-panel {
+    padding: 1rem;
+  }
+
+  .regulations-heading {
+    font-size: 1.3rem;
+  }
+
+  .bag-limit-info {
+    padding: 0.75rem;
+  }
+
+  .bag-limit-general {
+    font-size: 1rem;
+  }
+
+  .regulations-list li {
+    font-size: 0.9rem;
+  }
+}

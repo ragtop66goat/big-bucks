@@ -1,0 +1,23 @@
+.modal-header {
+  background-color: rgb(202, 70, 9);
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+@media (max-width: 576px) {
+  .modal-body {
+    padding: 1rem;
+  }
+}
