@@ -30,7 +30,8 @@ describe("Seasons Slice Reducer Tests", () => {
         },
         bagLimits: {
           general: "1 deer per license year",
-          antlerRestrictions: "Must have 4+ points on one side for buck harvest",
+          antlerRestrictions:
+            "Must have 4+ points on one side for buck harvest",
           notes: ["Either sex in some districts", "Check district regulations"],
         },
         regulations: [
@@ -39,7 +40,7 @@ describe("Seasons Slice Reducer Tests", () => {
           "Mandatory harvest reporting within 24 hours",
           "Field dressing required before transport",
         ],
-        image: "deer-season.jpg",
+        image: "deer.jpg",
       },
       {
         id: 2,
@@ -75,7 +76,7 @@ describe("Seasons Slice Reducer Tests", () => {
           "Mandatory harvest reporting within 24 hours",
           "Quarter elk in field before transport",
         ],
-        image: "elk-season.jpg",
+        image: "elk.jpg",
       },
       {
         id: 3,
@@ -110,7 +111,7 @@ describe("Seasons Slice Reducer Tests", () => {
           "Mandatory harvest reporting within 24 hours",
           "Baiting prohibited in most districts",
         ],
-        image: "bear-season.jpg",
+        image: "bear.jpg",
       },
     ],
     isAdminMode: false,
