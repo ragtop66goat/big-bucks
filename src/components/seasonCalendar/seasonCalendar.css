@@ -1,0 +1,100 @@
+.react-calendar {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border: 2px solid rgb(202, 70, 9);
+  border-radius: 8px;
+  font-family: inherit;
+  line-height: 1.125em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+  background-color: rgb(202, 70, 9);
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: rgb(202, 70, 9);
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  font-size: 0.9em;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: rgba(202, 70, 9, 0.1);
+  border-radius: 4px;
+}
+
+.react-calendar__tile--now {
+  background: rgba(224, 166, 6, 0.2);
+  border-radius: 4px;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: rgba(224, 166, 6, 0.3);
+}
+
+.react-calendar__tile--season {
+  background: rgba(202, 70, 9, 0.25);
+  font-weight: bold;
+  border-radius: 4px;
+  color: rgb(202, 70, 9);
+}
+
+.react-calendar__tile--season:enabled:hover,
+.react-calendar__tile--season:enabled:focus {
+  background: rgba(202, 70, 9, 0.4);
+  color: white;
+}
+
+.react-calendar__tile--active {
+  background: rgb(202, 70, 9);
+  color: white;
+  border-radius: 4px;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: rgb(180, 60, 8);
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #ccc;
+}

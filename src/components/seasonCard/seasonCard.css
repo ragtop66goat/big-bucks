@@ -1,0 +1,133 @@
+.season-card {
+  margin-bottom: 2rem;
+  border: 2px solid rgb(202, 70, 9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.season-card-header {
+  background-color: rgb(202, 70, 9);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.season-title-section {
+  flex: 1;
+}
+
+.season-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.season-species {
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.season-type-badge {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.season-card-body {
+  padding: 2rem;
+}
+
+.season-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.season-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.season-card-footer {
+  background-color: rgba(202, 70, 9, 0.05);
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(202, 70, 9, 0.2);
+  text-align: right;
+}
+
+.edit-season-btn {
+  border-color: rgb(202, 70, 9);
+  color: rgb(202, 70, 9);
+  font-weight: 600;
+}
+
+.edit-season-btn:hover {
+  background-color: rgb(202, 70, 9);
+  border-color: rgb(202, 70, 9);
+  color: white;
+}
+
+/* Tablet and smaller */
+@media (max-width: 992px) {
+  .season-content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .calendar-section {
+    align-items: center;
+  }
+
+  .season-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .season-type-badge {
+    align-self: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .season-name {
+    font-size: 1.5rem;
+  }
+
+  .season-species {
+    font-size: 1rem;
+  }
+
+  .season-card-body {
+    padding: 1rem;
+  }
+
+  .season-card-footer {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .edit-season-btn {
+    width: 100%;
+  }
+}
