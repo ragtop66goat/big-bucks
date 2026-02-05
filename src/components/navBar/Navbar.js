@@ -18,6 +18,9 @@ export function NavBar() {
               <Link to="/" className="navLink">
                 Home
               </Link>
+              <Link to="/about" className="navLink">
+                About
+              </Link>
               <Link to="/seasons" className="navLink">
                 Seasons
               </Link>
