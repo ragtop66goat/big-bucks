@@ -1,0 +1,14 @@
+.about-edit-modal .modal-body {
+  padding: 2rem;
+}
+
+.about-edit-modal .modal-title {
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 576px) {
+  .about-edit-modal .modal-body {
+    padding: 1rem;
+  }
+}

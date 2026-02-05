@@ -7,6 +7,7 @@ import { Seasons } from "./pages/seasonsPage/Seasons";
 import { Contact } from "./pages/contactPage/Contact";
 import { Lodging } from "./pages/lodgingPage/Lodging";
 import { Packages } from "./pages/packagesPage/Packages";
+import { About } from "./pages/aboutPage/About";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/lodging" element={<Lodging />} />
           <Route path="/packages" element={<Packages />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>

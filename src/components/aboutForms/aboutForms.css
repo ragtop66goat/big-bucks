@@ -1,0 +1,72 @@
+.about-form {
+  padding: 1rem 0;
+}
+
+.about-form .form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.about-form .form-actions button {
+  min-width: 100px;
+}
+
+.list-input-group {
+  margin-bottom: 1rem;
+}
+
+.list-items-container {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  min-height: 100px;
+}
+
+.list-item-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+}
+
+.list-item-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.list-item-delete-btn {
+  flex-shrink: 0;
+}
+
+.add-item-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-item-row input {
+  flex: 1;
+}
+
+@media (max-width: 576px) {
+  .about-form .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .about-form .form-actions button {
+    width: 100%;
+  }
+
+  .add-item-row {
+    flex-direction: column;
+  }
+
+  .add-item-row button {
+    width: 100%;
+  }
+}
